@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<main>
+		<form action="" class="formulario" id="formulario">
+			<!-- Grupo: Rut -->
+			<div class="formulario__grupo" id="grupo__Rut">
+				<label for="Rut" class="formulario__label">Rut</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="Rut" id="Rut" placeholder="11111111-1">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El Rut tiene que ser de 9 a 10 dígitos y solo puede contener numeros, letras y guion.</p>
+			</div>
+
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Juan">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 3 a 20 dígitos y solo puede contener letras .</p>
+			</div>
+
+			<!-- Grupo: app -->
+			<div class="formulario__grupo" id="grupo__app">
+				<label for="app" class="formulario__label">Apellido_Paterno</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="app" id="app" placeholder="Perez">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El apellido paterno tiene que ser de 3 a 20 Caracteres.</p>
+			</div>
+			<!-- Grupo: apm -->
+			<div class="formulario__grupo" id="grupo__apm">
+				<label for="apm" class="formulario__label">Apellido_Materno</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="apm" id="apm" placeholder="Mora">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El apellido materno tiene que ser de 3 a 20 Caracteres.</p>
+			</div>
+
+			<!-- Grupo: edad-->
+			<div class="formulario__grupo" id="grupo__edad">
+				<label for="edad" class="formulario__label">Edad</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="edad" id="edad" placeholder="Entre 18 y 35 años">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La Edad debe estar entre 18 y 35 anos.</p>
+			</div>
+			<!-- Grupo: Genero -->
+			<div class="formulario__grupo" id="grupo__genero">
+				<label for="Genero" class="formulario__label">Genero</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="genero" id="genero" placeholder="M / F">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El Genero debe ser F o M.</p>
+			</div> 
+
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 12 dígitos.</p>
+			</div>
+
+			<!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+	</main>
+
+	<script src="js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
